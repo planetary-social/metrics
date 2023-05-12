@@ -1,0 +1,28 @@
+groups:
+  - name: AllInstances
+    rules:
+      - alert: Zookeeper not writing logs
+        expr: dockerx_container_log_count_last_24_hours{container=~"/admin-zookeeper-1"} == 0
+        for: 1m
+        annotations:
+          title: "Zookeeper not writing logs"
+          description: "Zookeeper has not written any logs for the last 24 hours.  This could indicate an issue with the overall posthog service."
+        labels:
+          severity: moderate
+      - alert: Kafka not writing logs
+        expr: dockerx_container_log_count_last_24_hours{container=~"/admin-kafka-1"} == 0
+        for: 1m
+        annotations:
+          title: "Kafka not writing logs"
+          description: "Kafka has not written any logs for the last 24 hours.  This could indicate an issue with the overall posthog service."
+        labels:
+          severity: moderate
+      - alert: InstanceDown
+        # When to Alert
+        expr: up == 0
+        for: 1m
+        annotations:
+          title: 'Instance is down: {{ $labels.instance }}/{{ $labels.job }}'
+          description: 'The job {{ $labels.job}}({{ $labels.instance }}) has been down for more than one minute.'
+        labels:
+          severity: critical
