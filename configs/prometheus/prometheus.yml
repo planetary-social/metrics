@@ -40,8 +40,6 @@ scrape_configs:
     - "two.planetary.pub:9100"
     - "three.planetary.pub:9100"
     - "four.planetary.pub:9100"
-    - "notifications.nos.social"
-
 - job_name: cadvisor
   scrape_interval: 5s
   static_configs:
@@ -50,3 +48,6 @@ scrape_configs:
   scrape_interval: 5s
   static_configs:
   - targets: ["posthog.planetary.tools:2112"]
+- job_name: nos.notification.service
+  static_configs:
+    - "notifications.nos.social"
