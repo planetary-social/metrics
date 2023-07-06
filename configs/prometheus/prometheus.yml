@@ -40,6 +40,7 @@ scrape_configs:
     - "two.planetary.pub:9100"
     - "three.planetary.pub:9100"
     - "four.planetary.pub:9100"
+    - "notifications.nos.social"
 
 - job_name: cadvisor
   scrape_interval: 5s
