@@ -48,6 +48,6 @@ scrape_configs:
   scrape_interval: 5s
   static_configs:
   - targets: ["posthog.planetary.tools:2112"]
-- job_name: nos.notification.service
+- job_name: nos_notification_service
   static_configs:
     - "notifications.nos.social"
