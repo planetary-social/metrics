@@ -50,7 +50,9 @@ scrape_configs:
   - targets: ["posthog.planetary.tools:2112"]
 - job_name: nos_notification_service
   static_configs:
-  - targets: ["notifications.nos.social"]
+  - targets:
+    - "notifications.nos.social"
+    - "dev-notifications.nos.social"
 - job_name: rsslay
   static_configs:
   - targets: ["rss.nos.social"]
