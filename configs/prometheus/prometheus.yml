@@ -18,6 +18,29 @@ scrape_configs:
   scheme: http
   static_configs:
   - targets: ["prometheus:9090"]
+- job_name: node
+  static_configs:
+  - targets:
+    - "rss.nos.social"
+    - "notifications.nos.social:9100"
+    - "dev-notifications.nos.social:9100"
+    - "posthog.planetary.tools:9100"
+    - "poetry.planetary.pub:9100"
+    - "gardening.planetary.pub:9100"
+    - "fungi.planetary.pub:9100"
+    - "cooking.planetary.pub:9100"
+    - "floss.planetary.pub:9100"
+    - "crypto.planetary.pub:9100"
+    - "queer.family:9100"
+    - "espanol.planetary.pub:9100"
+    - "russian-language.planetary.pub:9100"
+    - "ukrainian-language.planetary.pub:9100"
+    - "chinese-language.planetary.pub:9100"
+    - "french-language.planetary.pub:9100"
+    - "one.planetary.pub:9100"
+    - "two.planetary.pub:9100"
+    - "three.planetary.pub:9100"
+    - "four.planetary.pub:9100"
 - job_name: posthog
   static_configs:
   - targets: ['posthog.planetary.tools:9100']
