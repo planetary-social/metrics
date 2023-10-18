@@ -41,6 +41,13 @@ scrape_configs:
     - "two.planetary.pub:9100"
     - "three.planetary.pub:9100"
     - "four.planetary.pub:9100"
+- job_name: nos
+  static_configs:
+  - targets:
+    - "tweeter.nos.social:9100"
+    - "rss.nos.social"
+    - "notifications.nos.social:9100"
+    - "dev-notifications.nos.social:9100"
 - job_name: posthog
   static_configs:
   - targets: ['posthog.planetary.tools:9100']
@@ -76,6 +83,10 @@ scrape_configs:
   - targets:
     - "notifications.nos.social"
     - "dev-notifications.nos.social"
+- job_name: nos_crossposting_service
+  static_configs:
+  - targets:
+    - "tweeter.nos.social"
 - job_name: rsslay
   static_configs:
   - targets: ["rss.nos.social"]
