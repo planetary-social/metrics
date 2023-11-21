@@ -44,6 +44,7 @@ scrape_configs:
 - job_name: nos
   static_configs:
   - targets:
+    - "events.nos.social:9100"
     - "tweeter.nos.social:9100"
     - "notifications.nos.social:9100"
     - "dev-notifications.nos.social:9100"
