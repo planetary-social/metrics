@@ -87,6 +87,10 @@ scrape_configs:
   static_configs:
   - targets:
     - "tweeter.nos.social"
+- job_name: nos_event_service
+  static_configs:
+  - targets:
+    - "events.nos.social"
 - job_name: rsslay
   static_configs:
   - targets: ["rss.nos.social"]
