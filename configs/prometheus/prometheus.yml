@@ -87,6 +87,10 @@ scrape_configs:
   static_configs:
   - targets:
     - "tweeter.nos.social"
+- job_name: nos_crossposting_docker_stats
+  scrape_interval: 5s
+  static_configs:
+  - targets: ["tweeter.nos.social:8008"]
 - job_name: nos_event_service
   static_configs:
   - targets:
