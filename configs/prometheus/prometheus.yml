@@ -45,7 +45,7 @@ scrape_configs:
   static_configs:
   - targets:
     - "events.nos.social:9100"
-    - "tweeter.nos.social:9100"
+    - "connect.nos.social:9100"
     - "notifications.nos.social:9100"
     - "dev-notifications.nos.social:9100"
 - job_name: posthog
@@ -86,11 +86,11 @@ scrape_configs:
 - job_name: nos_crossposting_service
   static_configs:
   - targets:
-    - "tweeter.nos.social"
+    - "connect.nos.social"
 - job_name: nos_crossposting_docker_stats
   scrape_interval: 5s
   static_configs:
-  - targets: ["tweeter.nos.social:8080"]
+  - targets: ["connect.nos.social:8080"]
 - job_name: nos_event_service
   static_configs:
   - targets:
