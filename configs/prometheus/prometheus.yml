@@ -24,6 +24,7 @@ scrape_configs:
     - "rss.nos.social"
     - "notifications.nos.social:9100"
     - "dev-notifications.nos.social:9100"
+    - "connect.nos.social:9100"
     - "sentry.nos.social:9100"
     - "posthog.planetary.tools:9100"
     - "poetry.planetary.pub:9100"
