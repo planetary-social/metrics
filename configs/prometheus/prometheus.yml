@@ -6,7 +6,7 @@ rule_files:
   - rules.yml
 alerting:
   alertmanagers:
-    - scheme: https
+    - scheme: http
       static_configs:
       - targets: ["alertmanager:9093"]
 scrape_configs:
