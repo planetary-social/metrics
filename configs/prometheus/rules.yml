@@ -9,16 +9,7 @@ groups:
           description: "Zookeeper has not written any logs for the last 24 hours.  This could indicate an issue with the overall posthog service."
         labels:
           severity: moderate
-      - alert: Kafka not writing logs
-        expr: dockerx_container_log_count_last_24_hours{container=~"/admin-kafka-1"} == 0
-        for: 1m
-        annotations:
-          title: "Kafka not writing logs"
-          description: "Kafka has not written any logs for the last 24 hours.  This could indicate an issue with the overall posthog service."
-        labels:
-          severity: moderate
       - alert: InstanceDown
-        # When to Alert
         expr: up == 0
         for: 1m
         annotations:
