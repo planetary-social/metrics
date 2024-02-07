@@ -21,6 +21,7 @@ scrape_configs:
 - job_name: node
   static_configs:
   - targets:
+    - "nos.social:9100"
     - "relay.nos.social:9100"
     - "rss.nos.social:9100"
     - "notifications.nos.social:9100"
@@ -47,6 +48,7 @@ scrape_configs:
 - job_name: nos
   static_configs:
   - targets:
+    - "nos.social:9100"
     - "events.nos.social:9100"
     - "connect.nos.social:9100"
     - "notifications.nos.social:9100"
@@ -101,3 +103,6 @@ scrape_configs:
 - job_name: rsslay
   static_configs:
   - targets: ["rss.nos.social"]
+- job_name: nos_social_nip05
+  static_configs:
+  - targets: ["nos.social"]
