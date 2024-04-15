@@ -44,6 +44,7 @@ scrape_configs:
     - "two.planetary.pub:9100"
     - "three.planetary.pub:9100"
     - "four.planetary.pub:9100"
+    - "reportinator2.ansible.fun:9100"
 - job_name: nos
   static_configs:
   - targets:
@@ -54,6 +55,7 @@ scrape_configs:
     - "dev-notifications.nos.social:9100"
     - "rss.nos.social:9100"
     - "relay.nos.social:9100"
+    - "reportinator2.ansible.fun:9100"
 - job_name: internal_tools
   static_configs:
   - targets:
@@ -96,3 +98,7 @@ scrape_configs:
 - job_name: nos_social_nip05
   static_configs:
   - targets: ["nos.social"]
+- job_name: reportinator
+  static_configs:
+  - targets: ["reportinator2.ansible.fun"]
+
