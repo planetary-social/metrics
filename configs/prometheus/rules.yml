@@ -14,6 +14,6 @@ groups:
         for: 1h
         annotations:
           title: 'Instance is down: {{ $labels.instance }}/{{ $labels.job }}'
-          description: 'The job {{ $labels.job}}({{ $labels.instance }}) has been down for more than one minute.'
+          description: 'The job {{ $labels.job}}({{ $labels.instance }}) has been down for more than one hour.'
         labels:
           severity: critical
